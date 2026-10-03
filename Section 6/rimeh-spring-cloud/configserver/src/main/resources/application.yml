@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: "configserver"
+  profiles:
+    #active: native
+    active: git
+  cloud:
+    config:
+      server:
+        #native:
+          #search-locations: "classpath:/config"
+          #search-locations: C:\SOA\Section 6\rimeh-spring-cloud/config-repo
+        git:
+          uri: https://github.com/Rimeh-BenSalah/config-repo.git
+          default-label: main
+          clone-on-start: true
+server:
+  port: 9999
